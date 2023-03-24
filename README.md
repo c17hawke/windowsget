@@ -74,4 +74,10 @@ NOTE: if in case you face difficulty in running the init_setup.sh file then you 
 
 > This completes the environment setup of the project!!
 
-> Now you can start the development!!!
+
+### STEP 07: Now you can start the development by activating the environment
+
+- To activate the environment run the following command - 
+    ```bash
+    conda activate ./env
+    ```

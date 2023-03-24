@@ -40,6 +40,12 @@ YEAR=<YEAR>
 
 ### STEP 04: Run the template.py file
 
+> NOTE: make sure you have dotenv installed before running the following command. To install it simply run the following command - 
+> ```bash
+> pip install python-dotenv
+> ```
+
+
 use template.py to create the other required files by running the following command - 
 
 ```bash 

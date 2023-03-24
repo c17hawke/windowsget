@@ -19,6 +19,9 @@ def download(URL: str, filepath: Path) -> int:
 
     # Check if the HTTP status code is OK (200)
     if response.status_code == 200:
+        # Create the parent directory of the file if it does not exist
+        filepath.parent.mkdir(exist_ok=True, parents=True)
+        
         # Write the contents of the response to the file
         with open(filepath, 'wb') as f:
             bytes_downloaded = f.write(response.content)

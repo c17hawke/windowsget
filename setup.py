@@ -5,11 +5,11 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "<REPO_NAME>"
-AUTHOR_USER_NAME = "<AUTHOR_USER_NAME>"
-PACKAGE_NAME = "<PACKAGE_NAME>"
-AUTHOR_EMAIL = "<AUTHOR_EMAIL>"
-COMMAND_NAME = "<COMMAND_NAME>"
+REPO_NAME = "winget"
+AUTHOR_USER_NAME = "c17hawke"
+PACKAGE_NAME = "winget"
+AUTHOR_EMAIL = "sunny.c17hawke@gmail.com"
+COMMAND_NAME = "winget"
 
 setuptools.setup(
     name=PACKAGE_NAME,

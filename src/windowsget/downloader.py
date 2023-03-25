@@ -3,14 +3,15 @@ from pathlib import Path
 from windowsget.logger import logger
 import os
 
+
 def download(URL: str, filepath: Path) -> int:
     """
     Download a file from the specified URL and save it to the specified filepath.
 
     Args:
         URL (str): The URL of the file to download.
-        filepath (Path): The file path where to save the downloaded file. 
-        
+        filepath (Path): The file path where to save the downloaded file.
+
     Returns:
         int: The number of bytes downloaded.
 
@@ -26,9 +27,9 @@ def download(URL: str, filepath: Path) -> int:
 
         filename, extension = os.path.splitext(filepath)
         if extension == "":
-            logger.exception(f"ValuError: The file extension must be provided!")
+            logger.exception("ValuError: The file extension must be provided!")
             raise ValueError("The file extension must be provided!")
-        
+
         # Write the contents of the response to the file
         with open(filepath, 'wb') as f:
             bytes_downloaded = f.write(response.content)

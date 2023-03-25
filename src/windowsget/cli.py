@@ -3,6 +3,7 @@ from pathlib import Path
 from windowsget import download
 from windowsget.logger import logger
 
+
 def main():
     """
     Download a file from a given URL and save it to the specified output file or to the current
@@ -16,7 +17,8 @@ def main():
         python downloader.py https://example.com/file.zip -o /path/to/output.zip
     """
     parser = argparse.ArgumentParser(
-        description="Download a file from a given URL and save it to the specified output file or to the current working directory."
+        description="Download a file from a given URL and save it to \
+        the specified output file or to the current working directory."
     )
 
     # Add a positional argument for the URL
@@ -47,6 +49,7 @@ def main():
     except Exception as e:
         logger.exception(e)
         raise e
+
 
 if __name__ == "__main__":
     main()

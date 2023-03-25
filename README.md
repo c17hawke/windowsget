@@ -81,3 +81,48 @@ NOTE: if in case you face difficulty in running the init_setup.sh file then you 
     ```bash
     conda activate ./env
     ```
+
+### Create Dockerfile for running tox test locally - 
+
+- Create a Dockerfile in your project directory with the following contents:
+
+    ```Dockerfile
+    FROM python:3.8
+
+    # Install necessary packages
+    RUN apt-get update && \
+        apt-get install -y git && \
+        pip install tox
+
+    # Set working directory
+    WORKDIR /app
+
+    # Copy the project files into the container
+    COPY . /app
+
+    # Run tox
+    CMD ["tox"]
+    ```
+- Build the Docker image by running the following command in your project directory:
+
+```bash
+docker build -t myproject .
+```
+- Run tox inside a container using the Docker image by running the following command:
+
+```bash
+docker run -it --rm myproject
+```
+> NOTE: The above two commands should be executed again if you update the code.
+
+
+- If you want to persist data between container runs (such as test results or code coverage reports), you can use Docker volumes to mount directories inside the container to directories on your local machine. For example:
+
+```bash
+docker run -it --rm -v $(pwd)/results:/app/results myproject
+```
+> This will mount the results directory inside the container to a directory named results in your current working directory on the host machine, allowing you to save test results or other data outside the container.
+
+
+
+

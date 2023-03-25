@@ -1,4 +1,4 @@
-# winget: python cli template
+# windowsget: python cli template
 
 - `windowsget` is a Python-based command-line interface (CLI) utility that can be used to download files from the internet on Windows operating system. 
 - It is designed to be similar to the `wget` command in Linux. The syntax for using `windowsget` is as follows:

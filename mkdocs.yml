@@ -1,5 +1,5 @@
 # Project information
-site_name: winget
+site_name: windowsget
 # defeine TOC or order of website-
 nav:
   - Home: index.md
@@ -9,8 +9,8 @@ site_description: >-
   A library for rendering YouTube and reference sites in Jupyter notebooks
 
 # Repository
-repo_name: c17hawke/winget
-repo_url: https://github.com/c17hawke/winget
+repo_name: c17hawke/windowsget
+repo_url: https://github.com/c17hawke/windowsget
 
 # Configuration
 theme:

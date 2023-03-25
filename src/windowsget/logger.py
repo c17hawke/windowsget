@@ -16,4 +16,4 @@ logging.basicConfig(
     ],
 )
 
-logger = logging.getLogger("winget")
+logger = logging.getLogger("windowsget")

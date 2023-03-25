@@ -5,11 +5,11 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "winget"
+REPO_NAME = "windowsget"
 AUTHOR_USER_NAME = "c17hawke"
-PACKAGE_NAME = "winget"
+PACKAGE_NAME = "windowsget"
 AUTHOR_EMAIL = "sunny.c17hawke@gmail.com"
-COMMAND_NAME = "winget"
+COMMAND_NAME = "windowsget"
 
 setuptools.setup(
     name=PACKAGE_NAME,

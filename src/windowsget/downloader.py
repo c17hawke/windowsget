@@ -1,6 +1,6 @@
 import requests
 from pathlib import Path
-from winget.logger import logger
+from windowsget.logger import logger
 import os
 
 def download(URL: str, filepath: Path) -> int:

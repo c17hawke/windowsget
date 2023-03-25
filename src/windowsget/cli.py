@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
-from winget import download
-from winget.logger import logger
+from windowsget import download
+from windowsget.logger import logger
 
 def main():
     """
@@ -10,7 +10,7 @@ def main():
 
     The script takes a URL as input and downloads the file located at that URL to the specified
     output file or to the current working directory if no output file is specified. It uses the
-    `winget` package to perform the download.
+    `windowsget` package to perform the download.
 
     Example usage:
         python downloader.py https://example.com/file.zip -o /path/to/output.zip

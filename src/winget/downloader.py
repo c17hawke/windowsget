@@ -1,5 +1,6 @@
 import requests
 from pathlib import Path
+from winget.logger import logger
 
 def download(URL: str, filepath: Path) -> int:
     """
@@ -29,5 +30,6 @@ def download(URL: str, filepath: Path) -> int:
         # Return the number of bytes downloaded
         return bytes_downloaded
     else:
+        logger.warning(f"status code: {response.status_code}, raising exception")
         # Raise an HTTPError if the status code is not OK
         response.raise_for_status()

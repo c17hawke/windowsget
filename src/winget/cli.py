@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 from winget import download
-
+from winget.logger import logger
 
 def main():
     """
@@ -39,13 +39,14 @@ def main():
     filepath = args.output
     if filepath is None:
         filepath = Path(args.url).name
-
-    # Download the file and get the size of the downloaded file
-    file_size = download(URL=args.url, filepath=Path(filepath))
-
-    # Print the success message with the filepath and size of the downloaded file
-    print(f"Download successfully completed at {filepath} of size: {file_size} bytes")
-
+    try:
+        # Download the file and get the size of the downloaded file
+        file_size = download(URL=args.url, filepath=Path(filepath))
+        # Print the success message with the filepath and size of the downloaded file
+        logger.info(f"Download successfully completed at {filepath} of size: {file_size} bytes")
+    except Exception as e:
+        logger.exception(e)
+        raise e
 
 if __name__ == "__main__":
     main()

@@ -7,4 +7,5 @@ tqdm
 python-dotenv
 pip-chill
 types-requests
+requests
 -e .

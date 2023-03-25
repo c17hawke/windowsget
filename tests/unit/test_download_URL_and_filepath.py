@@ -29,6 +29,9 @@ def test_correct_URL_and_filepath(URL, filepath):
 
 @pytest.mark.parametrize("URL, filepath", bad_filepaths)
 def test_bad_URL_and_filepath(URL, filepath):
+    TEST_DIR = "test_dir"
+    test_filepath = f"{TEST_DIR}/{filepath}"
     with pytest.raises(ValueError):
-        response = download(URL=URL, filepath=Path(filepath))
+        response = download(URL=URL, filepath=Path(test_filepath))
+    shutil.rmtree(TEST_DIR)
 

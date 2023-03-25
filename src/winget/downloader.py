@@ -1,6 +1,7 @@
 import requests
 from pathlib import Path
 from winget.logger import logger
+import os
 
 def download(URL: str, filepath: Path) -> int:
     """
@@ -22,6 +23,11 @@ def download(URL: str, filepath: Path) -> int:
     if response.status_code == 200:
         # Create the parent directory of the file if it does not exist
         filepath.parent.mkdir(exist_ok=True, parents=True)
+
+        filename, extension = os.path.splitext(filepath)
+        if extension == "":
+            logger.exception(f"ValuError: The file extension must be provided!")
+            raise ValueError("The file extension must be provided!")
         
         # Write the contents of the response to the file
         with open(filepath, 'wb') as f:

@@ -2,6 +2,7 @@ from winget import download
 import pytest
 from pathlib import Path
 from requests.exceptions import HTTPError
+import os
 
 correct_URLs = [
     "https://raw.githubusercontent.com/c17hawke/raw_data/main/interactions.csv"
@@ -17,6 +18,7 @@ def test_correct_URLs_only(URL):
     filepath = Path(URL).name
     response = download(URL=URL, filepath=Path(filepath))
     assert isinstance(response, int)
+    os.remove(Path(filepath))
 
 @pytest.mark.parametrize("URL", bad_URLs)
 def test_bad_URLs_only(URL):

@@ -1,2 +1,1 @@
-# Package name
-
+# winget: python cli template

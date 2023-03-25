@@ -39,3 +39,4 @@ def download(URL: str, filepath: Path) -> int:
         logger.warning(f"status code: {response.status_code}, raising exception")
         # Raise an HTTPError if the status code is not OK
         response.raise_for_status()
+        return 0

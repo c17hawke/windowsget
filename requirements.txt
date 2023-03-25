@@ -6,4 +6,5 @@ ipywidgets
 tqdm
 python-dotenv
 pip-chill
+types-requests
 -e .

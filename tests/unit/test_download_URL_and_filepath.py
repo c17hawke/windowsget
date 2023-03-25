@@ -1,4 +1,4 @@
-from winget import download
+from windowsget import download
 import pytest
 from pathlib import Path
 import shutil

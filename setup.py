@@ -3,7 +3,7 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 
 REPO_NAME = "windowsget"
 AUTHOR_USER_NAME = "c17hawke"
@@ -16,7 +16,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A small python package",
+    description="windowsget is a Python-based command-line interface (CLI) utility that can be used to download files from the internet on Windows operating system.",
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",

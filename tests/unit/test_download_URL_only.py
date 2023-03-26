@@ -4,24 +4,24 @@ from pathlib import Path
 from requests.exceptions import HTTPError
 import os
 
-correct_URLs = [
+correct_urls = [
     "https://raw.githubusercontent.com/c17hawke/raw_data/main/interactions.csv"
 ] 
 
-bad_URLs = [
+bad_urls = [
     "https://raw.githubusercontent.com/c17hawke/raw_data/main/interactions",
     "https://raw.githubusercontent.com/c17hawke/raw_data/main/xyz"
 ]
 
-@pytest.mark.parametrize("URL", correct_URLs)
-def test_correct_URLs_only(URL):
-    filepath = Path(URL).name
-    response = download(URL=URL, filepath=Path(filepath))
+@pytest.mark.parametrize("url", correct_urls)
+def test_correct_urls_only(url):
+    filepath = Path(url).name
+    response = download(url=url, filepath=Path(filepath))
     assert isinstance(response, int)
     os.remove(Path(filepath))
 
-@pytest.mark.parametrize("URL", bad_URLs)
-def test_bad_URLs_only(URL):
-    filepath = Path(URL).name
+@pytest.mark.parametrize("url", bad_urls)
+def test_bad_urls_only(url):
+    filepath = Path(url).name
     with pytest.raises(HTTPError):
-        response = download(URL=URL, filepath=Path(filepath))
+        response = download(url=url, filepath=Path(filepath))

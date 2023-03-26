@@ -1,3 +1,6 @@
+"""
+CLI
+"""
 import argparse
 from pathlib import Path
 from windowsget import download
@@ -43,12 +46,12 @@ def main():
         filepath = Path(args.url).name
     try:
         # Download the file and get the size of the downloaded file
-        file_size = download(URL=args.url, filepath=Path(filepath))
+        file_size = download(url=args.url, filepath=Path(filepath))
         # Print the success message with the filepath and size of the downloaded file
         logger.info(f"Download successfully completed at {filepath} of size: {file_size} bytes")
-    except Exception as e:
-        logger.exception(e)
-        raise e
+    except Exception as exe:
+        logger.exception(exe)
+        raise exe
 
 
 if __name__ == "__main__":

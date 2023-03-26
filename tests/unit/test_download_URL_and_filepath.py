@@ -17,21 +17,21 @@ bad_filepaths = [
 ]
 
 
-@pytest.mark.parametrize("URL, filepath", correct_filepaths)
-def test_correct_URL_and_filepath(URL, filepath):
+@pytest.mark.parametrize("url, filepath", correct_filepaths)
+def test_correct_url_and_filepath(url, filepath):
     TEST_DIR = "test_dir"
     test_filepath = f"{TEST_DIR}/{filepath}"
-    response = download(URL=URL, filepath=Path(test_filepath))
+    response = download(url=url, filepath=Path(test_filepath))
     assert isinstance(response, int)
     assert Path(test_filepath).exists()
     shutil.rmtree(TEST_DIR)
 
 
-@pytest.mark.parametrize("URL, filepath", bad_filepaths)
-def test_bad_URL_and_filepath(URL, filepath):
+@pytest.mark.parametrize("url, filepath", bad_filepaths)
+def test_bad_url_and_filepath(url, filepath):
     TEST_DIR = "test_dir"
     test_filepath = f"{TEST_DIR}/{filepath}"
     with pytest.raises(ValueError):
-        response = download(URL=URL, filepath=Path(test_filepath))
+        response = download(url=url, filepath=Path(test_filepath))
     shutil.rmtree(TEST_DIR)
 

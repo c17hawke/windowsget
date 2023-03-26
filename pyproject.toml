@@ -1,10 +1,10 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "windowsget"
-version = "0.0.8"
+version = "0.0.9"
 authors = [
   { name="c17hawke", email="windowsget" },
 ]

@@ -1,6 +1,26 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "windowsget"
+version = "0.0.8"
+authors = [
+  { name="c17hawke", email="windowsget" },
+]
+description = "windowsget is a Python-based command-line interface (CLI) utility that can be used to download files from the internet on Windows operating system."
+requires-python = ">=3.7"
+
+
+[project.readme]
+"content-type" = "text/markdown"
+"file" = "README.md"
+
+[project.urls]
+"Bug Tracker" = "https://github.com/c17hawke/windowsget/issues"
+"Documentation" = "https://c17hawke.github.io/windowsget/"
+"Homepage" = "https://c17hawke.github.io/windowsget/"
+"Source" = "https://github.com/c17hawke/windowsget"
 
 [tool.pytest.ini_options]
 testpaths = [

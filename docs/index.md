@@ -1,5 +1,7 @@
 # windowsget: python cli template
 
+[![PyPI](https://img.shields.io/pypi/v/windowsget)](https://pypi.org/project/windowsget/)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/windowsget.svg)](https://pypi.org/project/windowsget/)
 ## Introduction
 
 - `windowsget` is a Python-based command-line interface (CLI) utility that can be used to download files from the internet on Windows operating system.

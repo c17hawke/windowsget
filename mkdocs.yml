@@ -3,6 +3,7 @@ site_name: windowsget
 # defeine TOC or order of website-
 nav:
   - Home: index.md
+  - API Refence: API_references.md
 
 site_author: c17hawke
 site_description: >-
@@ -68,6 +69,7 @@ markdown_extensions:
   
 plugins:
   - search
+  - mkdocstrings
 
 copyright: |
   &copy; 2023 <a href="https://github.com/c17hawke"  target="_blank" rel="noopener">Sunny Bhaveen Chandra</a>

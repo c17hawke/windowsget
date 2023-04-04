@@ -2,6 +2,7 @@ notebook
 py-youtube
 ensure
 mkdocs-material
+mkdocstrings
 ipywidgets
 tqdm
 python-dotenv
